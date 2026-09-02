@@ -34,13 +34,37 @@
       justify-content: center;
       line-height: 1.15;
     }
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
     .word {
-      font-size: clamp(2.5rem, 8vw, 6rem);
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
       font-weight: 100;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       user-select: none;
       animation: weightBreathing 4s ease-in-out infinite;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .link-item {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: #888888;
+      text-decoration: none;
+      transition: color 0.3s ease, letter-spacing 0.3s ease;
+    }
+    .link-item:hover {
+      color: #ffffff;
+      letter-spacing: 0.22em;
     }
 
     @keyframes weightBreathing {
@@ -55,8 +79,15 @@
 </head>
 <body>
   <div class="container">
-    <div class="word">EVALINE</div>
-    <div class="word">WEBSITE</div>
+    <div class="title">
+      <div class="word">EVALINE</div>
+      <div class="word">WEBSITE</div>
+    </div>
+    <div class="links">
+      <a href="https://evaline.online" class="link-item" target="_blank" rel="noopener">evaline.online</a>
+      <a href="https://evaline.network" class="link-item" target="_blank" rel="noopener">evaline.network</a>
+      <a href="https://evabot.online" class="link-item" target="_blank" rel="noopener">evabot.online</a>
+    </div>
   </div>
 </body>
 </html>
