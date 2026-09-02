@@ -35,14 +35,14 @@
       justify-content: center;
       line-height: 1.15;
       width: 100%;
-      max-width: 650px;
-      padding: 0 1rem;
+      max-width: 720px;
+      padding: 0 1.5rem;
     }
     .title {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
     .word {
       font-family: 'Roboto Mono', monospace;
@@ -53,11 +53,10 @@
       user-select: none;
       animation: weightBreathing 4s ease-in-out infinite;
     }
-    .links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.8rem;
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem 3rem;
       width: 100%;
     }
     .link-item {
@@ -66,7 +65,7 @@
       align-items: center;
       width: 100%;
       font-family: 'Roboto Mono', monospace;
-      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-size: clamp(0.95rem, 2.2vw, 1.3rem);
       font-weight: 300;
       letter-spacing: 0.18em;
       color: #888888;
@@ -81,12 +80,19 @@
     }
     .link-item .dot {
       text-align: center;
+      padding: 0 1px;
     }
     .link-item .tld {
       text-align: left;
     }
     .link-item:hover {
       color: #ffffff;
+    }
+    @media (max-width: 580px) {
+      .links-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+      }
     }
 
     @keyframes weightBreathing {
@@ -105,15 +111,15 @@
       <div class="word">EVALINE</div>
       <div class="word">WEBSITE</div>
     </div>
-    <div class="links">
+    <div class="links-grid">
       <a href="https://evaline.website" class="link-item" target="_blank" rel="noopener">
         <span class="name">evaline</span><span class="dot">.</span><span class="tld">website</span>
       </a>
-      <a href="https://evaline.network" class="link-item" target="_blank" rel="noopener">
-        <span class="name">evaline</span><span class="dot">.</span><span class="tld">network</span>
-      </a>
       <a href="https://evaline.online" class="link-item" target="_blank" rel="noopener">
         <span class="name">evaline</span><span class="dot">.</span><span class="tld">online</span>
+      </a>
+      <a href="https://evaline.network" class="link-item" target="_blank" rel="noopener">
+        <span class="name">evaline</span><span class="dot">.</span><span class="tld">network</span>
       </a>
       <a href="https://evabot.online" class="link-item" target="_blank" rel="noopener">
         <span class="name">evabot</span><span class="dot">.</span><span class="tld">online</span>
