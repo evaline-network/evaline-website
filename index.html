@@ -6,7 +6,7 @@
   <title>EVALINE WEBSITE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -40,6 +40,16 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       user-select: none;
+      animation: weightBreathing 4s ease-in-out infinite;
+    }
+
+    @keyframes weightBreathing {
+      0%, 100% {
+        font-weight: 100;
+      }
+      50% {
+        font-weight: 700;
+      }
     }
   </style>
 </head>
