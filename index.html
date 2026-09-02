@@ -27,6 +27,7 @@
       align-items: center;
       text-align: center;
       overflow: hidden;
+      position: relative;
     }
     .container {
       display: flex;
@@ -34,65 +35,64 @@
       align-items: center;
       justify-content: center;
       line-height: 1.15;
-      width: 100%;
-      max-width: 720px;
-      padding: 0 1.5rem;
-    }
-    .title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 3rem;
     }
     .word {
       font-family: 'Roboto Mono', monospace;
-      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      font-size: clamp(2.5rem, 8vw, 6rem);
       font-weight: 100;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       user-select: none;
       animation: weightBreathing 4s ease-in-out infinite;
     }
-    .links-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.2rem 3rem;
-      width: 100%;
-    }
-    .link-item {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      width: 100%;
+    .nav-link {
+      position: absolute;
       font-family: 'Roboto Mono', monospace;
-      font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+      font-size: clamp(0.85rem, 1.8vw, 1.15rem);
       font-weight: 300;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.15em;
       color: #888888;
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, letter-spacing 0.3s ease;
+      white-space: nowrap;
+      z-index: 10;
+      padding: 0.8rem;
     }
-    .link-item span {
-      font-family: 'Roboto Mono', monospace;
-    }
-    .link-item .name {
-      text-align: right;
-    }
-    .link-item .dot {
-      text-align: center;
-      padding: 0 1px;
-    }
-    .link-item .tld {
-      text-align: left;
-    }
-    .link-item:hover {
+    .nav-link:hover {
       color: #ffffff;
+      letter-spacing: 0.22em;
     }
-    @media (max-width: 580px) {
-      .links-grid {
-        grid-template-columns: 1fr;
-        gap: 0.9rem;
+
+    /* 4 Sides of the screen */
+    .link-top {
+      top: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .link-right {
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-50%);
+    }
+    .link-bottom {
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .link-left {
+      top: 50%;
+      left: 2rem;
+      transform: translateY(-50%);
+    }
+
+    @media (max-width: 768px) {
+      .nav-link {
+        font-size: 0.75rem;
       }
+      .link-top { top: 1.2rem; }
+      .link-bottom { bottom: 1.2rem; }
+      .link-left { left: 0.5rem; }
+      .link-right { right: 0.5rem; }
     }
 
     @keyframes weightBreathing {
@@ -106,25 +106,22 @@
   </style>
 </head>
 <body>
+  <!-- Top Side -->
+  <a href="https://evaline.website" class="nav-link link-top" target="_blank" rel="noopener">evaline.website</a>
+
+  <!-- Right Side -->
+  <a href="https://evaline.online" class="nav-link link-right" target="_blank" rel="noopener">evaline.online</a>
+
+  <!-- Bottom Side -->
+  <a href="https://evaline.network" class="nav-link link-bottom" target="_blank" rel="noopener">evaline.network</a>
+
+  <!-- Left Side -->
+  <a href="https://evabot.online" class="nav-link link-left" target="_blank" rel="noopener">evabot.online</a>
+
+  <!-- Center Title -->
   <div class="container">
-    <div class="title">
-      <div class="word">EVALINE</div>
-      <div class="word">WEBSITE</div>
-    </div>
-    <div class="links-grid">
-      <a href="https://evaline.website" class="link-item" target="_blank" rel="noopener">
-        <span class="name">evaline</span><span class="dot">.</span><span class="tld">website</span>
-      </a>
-      <a href="https://evaline.online" class="link-item" target="_blank" rel="noopener">
-        <span class="name">evaline</span><span class="dot">.</span><span class="tld">online</span>
-      </a>
-      <a href="https://evaline.network" class="link-item" target="_blank" rel="noopener">
-        <span class="name">evaline</span><span class="dot">.</span><span class="tld">network</span>
-      </a>
-      <a href="https://evabot.online" class="link-item" target="_blank" rel="noopener">
-        <span class="name">evabot</span><span class="dot">.</span><span class="tld">online</span>
-      </a>
-    </div>
+    <div class="word">EVALINE</div>
+    <div class="word">WEBSITE</div>
   </div>
 </body>
 </html>
