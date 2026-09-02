@@ -48,51 +48,45 @@
     .nav-link {
       position: absolute;
       font-family: 'Roboto Mono', monospace;
-      font-size: clamp(0.85rem, 1.8vw, 1.15rem);
+      font-size: clamp(0.85rem, 1.8vw, 1.2rem);
       font-weight: 300;
       letter-spacing: 0.15em;
       color: #888888;
       text-decoration: none;
-      transition: color 0.3s ease, letter-spacing 0.3s ease;
+      transition: color 0.3s ease;
       white-space: nowrap;
       z-index: 10;
-      padding: 0.8rem;
     }
     .nav-link:hover {
       color: #ffffff;
-      letter-spacing: 0.22em;
     }
 
-    /* 4 Sides of the screen */
-    .link-top {
+    /* 4 Corners of the screen */
+    .link-top-left {
       top: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 2.5rem;
     }
-    .link-right {
-      top: 50%;
-      right: 2rem;
-      transform: translateY(-50%);
+    .link-top-right {
+      top: 2rem;
+      right: 2.5rem;
     }
-    .link-bottom {
+    .link-bottom-left {
       bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 2.5rem;
     }
-    .link-left {
-      top: 50%;
-      left: 2rem;
-      transform: translateY(-50%);
+    .link-bottom-right {
+      bottom: 2rem;
+      right: 2.5rem;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
       .nav-link {
         font-size: 0.75rem;
       }
-      .link-top { top: 1.2rem; }
-      .link-bottom { bottom: 1.2rem; }
-      .link-left { left: 0.5rem; }
-      .link-right { right: 0.5rem; }
+      .link-top-left { top: 1.2rem; left: 1.2rem; }
+      .link-top-right { top: 1.2rem; right: 1.2rem; }
+      .link-bottom-left { bottom: 1.2rem; left: 1.2rem; }
+      .link-bottom-right { bottom: 1.2rem; right: 1.2rem; }
     }
 
     @keyframes weightBreathing {
@@ -106,17 +100,17 @@
   </style>
 </head>
 <body>
-  <!-- Top Side -->
-  <a href="https://evaline.website" class="nav-link link-top" target="_blank" rel="noopener">evaline.website</a>
+  <!-- Top Left Corner -->
+  <a href="https://evaline.website" class="nav-link link-top-left" target="_blank" rel="noopener">evaline.website</a>
 
-  <!-- Right Side -->
-  <a href="https://evaline.online" class="nav-link link-right" target="_blank" rel="noopener">evaline.online</a>
+  <!-- Top Right Corner -->
+  <a href="https://evaline.network" class="nav-link link-top-right" target="_blank" rel="noopener">evaline.network</a>
 
-  <!-- Bottom Side -->
-  <a href="https://evaline.network" class="nav-link link-bottom" target="_blank" rel="noopener">evaline.network</a>
+  <!-- Bottom Left Corner -->
+  <a href="https://evaline.online" class="nav-link link-bottom-left" target="_blank" rel="noopener">evaline.online</a>
 
-  <!-- Left Side -->
-  <a href="https://evabot.online" class="nav-link link-left" target="_blank" rel="noopener">evabot.online</a>
+  <!-- Bottom Right Corner -->
+  <a href="https://evabot.online" class="nav-link link-bottom-right" target="_blank" rel="noopener">evabot.online</a>
 
   <!-- Center Title -->
   <div class="container">
