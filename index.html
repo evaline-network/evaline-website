@@ -52,13 +52,16 @@
       font-weight: 300;
       letter-spacing: 0.15em;
       color: #888888;
-      text-decoration: none;
-      transition: color 0.3s ease;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 1px;
+      transition: color 0.3s ease, text-decoration-color 0.3s ease;
       white-space: nowrap;
       z-index: 10;
     }
     .nav-link:hover {
       color: #ffffff;
+      text-decoration-color: #ffffff;
     }
 
     /* 4 Corners of the screen */
